@@ -6,6 +6,8 @@ module "eks" {
   cluster_version                = "1.30"
   cluster_endpoint_public_access = true
 
+  enable_irsa = true
+
   cluster_addons = {
     coredns = {
       most_recent = true
@@ -40,25 +42,6 @@ module "eks" {
       max_size     = 2
       desired_size = 1
       cpacity_type = "SPOT"
-
-      # This is not required - demonstrates how to pass additional configuration to nodeadm
-      # Ref https://awslabs.github.io/amazon-eks-ami/nodeadm/doc/api/
-      cloudinit_pre_nodeadm = [
-        {
-          content_type = "application/node.eks.aws"
-          content      = <<-EOT
-            ---
-            apiVersion: node.eks.aws/v1alpha1
-            kind: NodeConfig
-            spec:
-              kubelet:
-                config:
-                  shutdownGracePeriod: 30s
-                  featureGates:
-                    DisableKubeletCloudCredentialProviders: true
-          EOT
-        }
-      ]
     }
   }
 
