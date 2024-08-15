@@ -14,7 +14,7 @@ env:
 
 jobs:
   setup-eks-cluster:
-    if: contains(github.event.head_commit.message, 'terraform')
+    if: github.event.commits.*.modified == './terraform/**'
     runs-on: ubuntu-latest
 
     steps:
@@ -56,7 +56,7 @@ jobs:
       run: terraform apply -auto-approve
 
   deploy-sockshop:
-    if: contains(github.event.head_commit.message, 'k8s-manifests')
+    if: github.event.commits.*.modified == './k8s-manifests/**'
     runs-on: ubuntu-latest
     needs: setup-eks-cluster
 
