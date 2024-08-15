@@ -38,10 +38,10 @@ module "eks" {
     altschool-exam-cluster = {
       instance_types = ["t3.large"]
 
-      min_size     = 1
-      max_size     = 2
-      desired_size = 1
-      cpacity_type = "SPOT"
+      min_size     = 2
+      max_size     = 6
+      desired_size = 2
+      capacity_type = "SPOT"
     }
   }
 
