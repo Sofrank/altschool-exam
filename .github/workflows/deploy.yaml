@@ -31,6 +31,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
 
+    - name: Create terraform.tfvars file
+      run: |
+        echo "${{ secrets.TERRAFORMTFVARS }}" > ${{ env.TF_WORKING_DIR }}/terraform.tfvars
+
     - name: Initialize Terraform
       id: init
       run: terraform init
