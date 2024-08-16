@@ -90,7 +90,7 @@ aws eks update-kubeconfig --region us-east-1 --name Altschool-Exam-cluster
 
 8. You can use the command below to get all the resources deployed to the ```Altschool-Exam-cluster```
    ```
-   kubectl get-All 
+   kubectl get all -A 
    ```
 ![Kubectl Get-All](./project-images/kubectl-get-all.png)
 ![Kubectl Cluster](./project-images/kubectl-cluster.png)
