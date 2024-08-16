@@ -128,5 +128,5 @@ The code can be found here [.github/workflows/deploy.yaml](./.github/workflows/d
 This project provides hands-on experience with Infrastructure such as Code, Kubernetes, DevOps best practices, CI/CD, and cloud security. It also demonstrates the value of automation and monitoring in ensuring the reliability and performance of microservices-based applications. By the end of the project, there is a fully functional deployment pipeline for the Socks Shop application, including infrastructure provisioning, monitoring, logging, and security. 
 
 ## **N/B:** 
-AWS EKS is an expensive service. The command ```terraform destroy``` was used to destory all the resources created using terraform. However, the screenshots of the created resources are attached to this README.md; as well as screenshot of the ```terraform destroy```.
+AWS EKS is an expensive service. The command ```terraform destroy``` was used to destory all the resources created using terraform. However, the screenshots of the created resources are attached to this README.md.
 ![Terraform Destroy](./project-images/terraform-destroy.png)
