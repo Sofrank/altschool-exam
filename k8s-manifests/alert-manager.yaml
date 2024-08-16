@@ -51,6 +51,7 @@ metadata:
     name: alertmanager
   name: alertmanager
 spec:
+  type: LoadBalancer
   selector:
     app: alertmanager
   ports:
