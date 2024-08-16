@@ -35,14 +35,14 @@ GETTING STARTED
 <br>
 <br>
 
-**Resources:** 
+### **Resources:** 
 <br>
 
 - Socks Shop Microservices Demo: [GitHub Repository](https://github.com/microservices-demo/microservices-demo.github.io)
 - Detailed Implementation Guide: [GitHub Repository](https://github.com/microservices-demo/microservices-demo/tree/master)
 <br>
 
-**Infrastructure Provisioning:**
+## **Infrastructure Provisioning:**
 <br>
 
 1. Git clone this repository and navigate to the ```terraform``` folder to have the Terraform configuration files and initiate the Terraform project. 
@@ -101,19 +101,20 @@ kubectl port-forward service/front-end -n sock-shop 30001:80
  ```
 ![Frontend](./project-images/front-end.png)
 
-**MONITORING**
+## **MONITORING**
 <br>
 Prometheus will be used to monitor the performance and health of the Socks Shop application. This will include metrics such as request latency, error rate, and request volume. The Prometheus server will be configured to scrape metrics from the Socks Shop application and store them in a time-series database. <br> 
 Grafana will be used to visualize the metrics and create dashboards to monitor the performance and health of the application. <br>
-You can find manifests for these in the ```k8s-manifests```
+
+You can find manifests for these in the ``` k8s-manifests ```
 <br>
 
-- **Prometheus**
+### - **Prometheus**
 ![Prometheus](./project-images/prometheus.png)
 ![Prometheus POD Resources](./project-images/prometheus-pod-resources.png)
 <br>
 
-- **Grafana**
+### - **Grafana**
 ![Grafana](./project-images/grafana-sockshop.png)
 ![Kibanna Logging](./project-images/kibanna_logging.png)
 ![Route53](./project-images/route53.png)
@@ -123,16 +124,5 @@ You can find manifests for these in the ```k8s-manifests```
 GitHub Actions was used to automate the provisioning of Infrastructure and the deployment of the sock shop manifest to AWS EKS Cluster using the Terraform actions plugin.
 The code can be found here [.github/workflows/deploy.yaml](./.github/workflows/deploy.yaml)
 
-**CONCLUSION:** 
-This project 
-
-
- 
-
-
-# altschool-exam
-Configuration files for altschool exam
-
-```sh
-$ kubectl -f k8s-manifests
-```
+## **CONCLUSION:** 
+This project provides hands-on experience with Infrastructure such as Code, Kubernetes, DevOps best practices, CI/CD, and cloud security. It also demonstrates the value of automation and monitoring in ensuring the reliability and performance of microservices-based applications. By the end of the project, I have a fully functional deployment pipeline for the Socks Shop application, including infrastructure provisioning, monitoring, logging, and security. 
