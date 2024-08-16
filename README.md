@@ -90,7 +90,7 @@ aws eks update-kubeconfig --region us-east-1 --name Altschool-Exam-cluster
 
 8. You can use the command below to get all the resources deployed to the ```Altschool-Exam-cluster```
    ```
-   kubectl get-All 
+   kubectl get all -A 
    ```
 ![Kubectl Get-All](./project-images/kubectl-get-all.png)
 ![Kubectl Cluster](./project-images/kubectl-cluster.png)
@@ -125,4 +125,7 @@ GitHub Actions was used to automate the provisioning of Infrastructure and the d
 The code can be found here [.github/workflows/deploy.yaml](./.github/workflows/deploy.yaml)
 
 ## **CONCLUSION:** 
-This project provides hands-on experience with Infrastructure such as Code, Kubernetes, DevOps best practices, CI/CD, and cloud security. It also demonstrates the value of automation and monitoring in ensuring the reliability and performance of microservices-based applications. By the end of the project, I have a fully functional deployment pipeline for the Socks Shop application, including infrastructure provisioning, monitoring, logging, and security. 
+This project provides hands-on experience with Infrastructure such as Code, Kubernetes, DevOps best practices, CI/CD, and cloud security. It also demonstrates the value of automation and monitoring in ensuring the reliability and performance of microservices-based applications. By the end of the project, there is a fully functional deployment pipeline for the Socks Shop application, including infrastructure provisioning, monitoring, logging, and security. 
+
+## **N/B:** 
+AWS EKS is an expensive service. The command ```terraform destroy``` was used to destory all the resources created using terraform. However, the screenshots of the created resources are attached to this README.md
